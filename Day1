@@ -1,0 +1,13 @@
+import cv2                      #c2 is module in python
+
+cap=cv2.VideoCapture(0)    #VideoCaptue is function of cv2  
+
+while True:
+    status , photo= cap.read()
+    cv2.imshow("hello" , photo)
+    if cv2.waitKey(1) == 27:      #press esc for exit camera
+        break
+       
+    
+cv2.destroyAllWindows()
+cap.release()
